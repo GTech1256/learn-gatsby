@@ -18,7 +18,7 @@ const imageStyles = {
 const IndexPage = () => {
   return (
     <Layout>
-      <Link to="/more">
+      <Link to="/more/">
         <main style={pageStyles}>
           <SEO />
           <img src={mockPage} alt="Макет Сайта" style={imageStyles} />

@@ -29,7 +29,8 @@ module.exports = {
         background_color: `#18172D`,
         theme_color: `#18172D`,
         display: `standalone`,
-        icon: `src/images/favicon.png`
+        icon: `src/images/favicon.png`,
+        cache_busting_mode: 'none'
       },
     },
     {
@@ -37,7 +38,8 @@ module.exports = {
       options: {
          workboxConfig: {
             globPatterns: ['**/icon-path*']
-         }
+         },
+         precachePages: [`/`, `/more/`],
       }
    }
   ],
