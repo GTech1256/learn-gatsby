@@ -25,7 +25,7 @@ module.exports = {
       options: {
         name: `Island`,
         short_name: `Island`,
-        start_url: `/`,
+        start_url: `.`,
         background_color: `#18172D`,
         theme_color: `#18172D`,
         display: `standalone`,
@@ -36,11 +36,12 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-offline',
       options: {
-         workboxConfig: {
-            globPatterns: ['**/icon-path*']
-         },
-         precachePages: [`/`, `/more/`],
+        //  workboxConfig: {
+        //     globPatterns: ['**/icon-path*']
+        //  },
+        //  precachePages: [`/`, `/more/`],
       }
-   }
+    },
+    // 'gatsby-plugin-remove-serviceworker'
   ],
 };
