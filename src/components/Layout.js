@@ -4,24 +4,28 @@ import styled, {createGlobalStyle} from "styled-components"
 const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
-    overflow-x: hidden;
+    overflow: hidden;
     max-width: 320px;
     margin: auto;
     background-color: #18172D;
     fontFamily: "-apple-system, Roboto, sans-serif, serif";
   }
 
-  * {
-    max-width: 100%;
-    max-height: 100vh
+  img {
+    height: 99vh;
   }
+`
+
+const Main = styled.main`
+  display: flex;
+  justify-content: center;
 `
 
 export default function Layout({ children }) {
   return (
-    <main>
+    <Main>
       <GlobalStyle />
       {children}
-    </main>
+    </Main>
   )
 }
