@@ -1,4 +1,5 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 import styled, {createGlobalStyle} from "styled-components"
 
 const GlobalStyle = createGlobalStyle`
@@ -24,6 +25,9 @@ const Main = styled.main`
 export default function Layout({ children }) {
   return (
     <Main>
+      <Helmet>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1 user-scalable=no"/>
+      </Helmet>
       <GlobalStyle />
       {children}
     </Main>
